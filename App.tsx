@@ -18,7 +18,7 @@ export default function App() {
     // --- 2. Load the fonts ---
   let [fontsLoaded] = useFonts({
     Inter_400Regular,
-    Inter_700Bold, // You can load multiple weights
+    Inter_700Bold,
   });
 
   const colorScheme = useColorScheme();

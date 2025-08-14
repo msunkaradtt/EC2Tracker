@@ -3,11 +3,6 @@ import { MD3LightTheme, MD3DarkTheme, configureFonts } from 'react-native-paper'
 
 const fontConfig = {
   fontFamily: 'Inter_400Regular',
-  // You can define configs for different variants here if needed
-  // For example:
-  // titleLarge: {
-  //   fontFamily: 'Inter_700Bold',
-  // },
 };
 
 export const lightTheme = {

@@ -12,16 +12,12 @@ export default function AnimatedGradient() {
     Animated.loop(
       Animated.timing(animatedValue, {
         toValue: 1,
-        // --- 1. SLOW DOWN THE ANIMATION ---
-        // Increased from 4000ms to 10000ms (10 seconds)
         duration: 10000, 
         useNativeDriver: false,
       })
     ).start();
   }, []);
 
-  // --- 2. MAKE THE TRANSITION MORE COMPLEX ---
-  // We now transition through three colors to make it feel less repetitive.
   const firstColor = animatedValue.interpolate({
     inputRange: [0, 0.5, 1],
     outputRange: [

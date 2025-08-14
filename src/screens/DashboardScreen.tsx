@@ -98,8 +98,6 @@ export default function DashboardScreen({ onLogout }: { onLogout: () => void }) 
   
   // Handle the logout press from the Appbar
   const handleLogoutPress = async () => {
-    // We need to import deleteCredentials if it's not already
-    // For now, assuming it's available or we call onLogout directly
     await deleteCredentials(); 
     onLogout(); 
   };

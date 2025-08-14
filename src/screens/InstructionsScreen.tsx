@@ -3,7 +3,7 @@ import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Button, Text, Surface, useTheme } from 'react-native-paper';
 
-// The CodeBlock component is now a theme-aware Surface
+
 const CodeBlock = ({ children }: { children: string }) => {
   return (
     <Surface style={styles.codeBlock} elevation={1}>

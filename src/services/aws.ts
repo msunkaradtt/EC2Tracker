@@ -2,7 +2,7 @@
 import { 
   OrganizationsClient, 
   ListAccountsCommand,
-  DescribeOrganizationCommand // <-- 1. Import new command
+  DescribeOrganizationCommand
 } from "@aws-sdk/client-organizations";
 import { EC2Client, DescribeInstancesCommand } from "@aws-sdk/client-ec2";
 import { STSClient, AssumeRoleCommand } from "@aws-sdk/client-sts";
@@ -24,7 +24,7 @@ export const fetchAllInstanceData = async (rootRegion: string, ec2Regions: strin
   for (const account of accounts.Accounts || []) {
     // --- 3. Add check to filter out the management account ---
     if (account.Id === managementAccountId) {
-      continue; // Skip to the next iteration
+      continue;
     }
 
     if (account.Status !== 'ACTIVE') {
