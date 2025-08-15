@@ -15,6 +15,7 @@ import { fetchAllInstanceData } from '../services/aws';
 import AccountCard from '../components/AccountCard';
 import { REGION_GROUPS, Region } from '../constants/regions';
 import { deleteCredentials } from '../services/credentials';
+import Footer from '../components/Footer';
 
 // Define types for state management
 interface Instance {
@@ -168,13 +169,20 @@ export default function DashboardScreen({ onLogout }: { onLogout: () => void }) 
         Root Region: {rootRegion}
       </Button>
       
-      {renderContent()}
+      <View style={styles.contentWrapper}>
+        {renderContent()}
+        <Footer />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
+  contentWrapper: {
+    flex: 1,
+    justifyContent: 'space-between',
+  },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   listContent: { paddingBottom: 20 },
   rootRegionButton: {

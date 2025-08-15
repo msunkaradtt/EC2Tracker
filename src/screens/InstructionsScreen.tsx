@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Button, Text, Surface, useTheme } from 'react-native-paper';
-
+import Footer from '../components/Footer';
 
 const CodeBlock = ({ children }: { children: string }) => {
   return (
@@ -89,6 +89,7 @@ export default function InstructionsScreen({ onBack }: { onBack: () => void }) {
         <Button mode="contained" onPress={onBack} style={styles.backButton}>
           Back to Login
         </Button>
+        <Footer />
       </View>
     </ScrollView>
   );
